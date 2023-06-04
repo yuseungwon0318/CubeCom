@@ -26,7 +26,6 @@ public class RotateCube : MonoBehaviour
             else if (touch.phase == TouchPhase.Moved)
             {
                 nowPos = touch.position - touch.deltaPosition;
-                Debug.Log("È¸Àü");
 
                 Rotate(CubeViwer.rotation.y);
 
