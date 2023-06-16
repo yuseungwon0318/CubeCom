@@ -9,16 +9,27 @@ public class ChangeNum : MonoBehaviour
     int randomNum;
 
     public List<Material> Num = new List<Material>();
+    public Material Base;
 
     private void Start()
     {
         changeNum();
+        this.GetComponent<MeshRenderer>().material = Base;
     }
 
     void changeNum()
     {
         randomNum = Random.Range(1, Num.Count);
 
-        gameObject.GetComponent<MeshRenderer>().material = Num[randomNum -1];
+        //gameObject.GetComponent<MeshRenderer>().material = Num[randomNum -1];
+
+        for(int i = 0; i < 6; i++) 
+        {
+            gameObject.GetComponentsInChildren<MeshRenderer>()[i].material = Num[randomNum - 1];
+        }
+
+        this.gameObject.tag = Num[randomNum - 1].name;
+
+       
     }
 }

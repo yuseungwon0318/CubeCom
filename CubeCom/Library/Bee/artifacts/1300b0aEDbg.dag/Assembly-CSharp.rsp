@@ -348,6 +348,7 @@
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/2.Scripts/ChangeNum.cs"
 "Assets/2.Scripts/CheckCube.cs"
+"Assets/2.Scripts/CheckFront.cs"
 "Assets/2.Scripts/GameManager.cs"
 "Assets/2.Scripts/PannelTouch.cs"
 "Assets/2.Scripts/RotateCube.cs"
