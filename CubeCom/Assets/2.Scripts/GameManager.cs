@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
 
@@ -28,6 +29,12 @@ public class GameManager : MonoBehaviour
 
             return instance;
         }
+    }
+
+    private void Start()
+    {
+        score = 0;
+        Reset();
     }
 
     public bool first = false;
@@ -86,7 +93,7 @@ public class GameManager : MonoBehaviour
         A = GameObject.Find(a).GetComponent<CheckCube>();
         B = GameObject.Find(b).GetComponent<CheckCube>();
         C = GameObject.Find(c).GetComponent<CheckCube>();
-
+        PlusScore();
         Rotate(Vector3.down, A, B, C);
     }
     public void RotateLeft(string a, string b, string c)
@@ -94,7 +101,7 @@ public class GameManager : MonoBehaviour
         A = GameObject.Find(a).GetComponent<CheckCube>();
         B = GameObject.Find(b).GetComponent<CheckCube>();
         C = GameObject.Find(c).GetComponent<CheckCube>();
-
+        PlusScore();
         Rotate(Vector3.up, A, B, C);
     }
     public void RotateDown(string a, string b, string c)
@@ -102,7 +109,7 @@ public class GameManager : MonoBehaviour
         A = GameObject.Find(a).GetComponent<CheckCube>();
         B = GameObject.Find(b).GetComponent<CheckCube>();
         C = GameObject.Find(c).GetComponent<CheckCube>();
-
+        PlusScore();
         Rotate(Vector3.left, A, B, C);
     }
     public void RotateUp(string a, string b, string c)
@@ -110,7 +117,16 @@ public class GameManager : MonoBehaviour
         A = GameObject.Find(a).GetComponent<CheckCube>();
         B = GameObject.Find(b).GetComponent<CheckCube>();
         C = GameObject.Find(c).GetComponent<CheckCube>();
-
+        PlusScore();
         Rotate(Vector3.right, A, B, C);
+    }
+
+    public Text Score;
+    public int score;
+
+    public void PlusScore()
+    {
+        score += one + two + three; 
+        Score.text = score.ToString();
     }
 }

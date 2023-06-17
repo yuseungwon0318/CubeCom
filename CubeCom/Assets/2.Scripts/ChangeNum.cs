@@ -17,13 +17,14 @@ public class ChangeNum : MonoBehaviour
         this.GetComponent<MeshRenderer>().material = Base;
     }
 
-    void changeNum()
+    public void changeNum()
     {
+        Debug.Log("¹Ù²ï´ç");
         randomNum = Random.Range(1, Num.Count);
 
         //gameObject.GetComponent<MeshRenderer>().material = Num[randomNum -1];
 
-        for(int i = 0; i < 6; i++) 
+        for(int i = 0; i < 7; i++) 
         {
             gameObject.GetComponentsInChildren<MeshRenderer>()[i].material = Num[randomNum - 1];
         }

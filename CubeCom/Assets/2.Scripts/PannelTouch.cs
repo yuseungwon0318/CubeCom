@@ -109,10 +109,12 @@ public class PannelTouch : MonoBehaviour, IPointerClickHandler
                             {
                                 case "1":
                                     GameManager.Instance.RotateRight("SIDE1", "SIDE2", "SIDE3");
+                                   
                                     GameManager.Instance.Reset();
                                     break;
                                 case "3":
                                     GameManager.Instance.RotateLeft("SIDE1", "SIDE2", "SIDE3");
+                      
                                     GameManager.Instance.Reset();
                                     break;
                             }
@@ -136,10 +138,12 @@ public class PannelTouch : MonoBehaviour, IPointerClickHandler
                             {
                                 case "1":
                                     GameManager.Instance.RotateDown("UP1", "UP4", "UP7");
+              
                                     GameManager.Instance.Reset();
                                     break;
                                 case "7":
                                     GameManager.Instance.RotateUp("UP1", "UP4", "UP7");
+                               
                                     GameManager.Instance.Reset();
                                     break;
                             }
@@ -161,6 +165,7 @@ public class PannelTouch : MonoBehaviour, IPointerClickHandler
                             {
                                 case "2":
                                     GameManager.Instance.RotateDown("UP2", "UP5", "UP8");
+
                                     GameManager.Instance.Reset();
                                     break;
                                 case "4":

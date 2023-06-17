@@ -51,6 +51,10 @@ public class RotateCube : MonoBehaviour
         C = GameObject.Find(c).GetComponent<CheckCube>();
 
         Rotate(Vector3.down, A, B, C);
+
+        A.GetComponent<ChangeNum>().changeNum();
+        B.GetComponent<ChangeNum>().changeNum();
+        C.GetComponent<ChangeNum>().changeNum();
     }
     public void RotateRight(string a, string b, string c)
     {
@@ -59,6 +63,10 @@ public class RotateCube : MonoBehaviour
         C = GameObject.Find(c).GetComponent<CheckCube>();
 
         Rotate(Vector3.up, A, B, C);
+
+        A.GetComponent<ChangeNum>().changeNum();
+        B.GetComponent<ChangeNum>().changeNum();
+        C.GetComponent<ChangeNum>().changeNum();
     }
     public void RotateUp(string a, string b, string c)
     {
@@ -67,6 +75,10 @@ public class RotateCube : MonoBehaviour
         C = GameObject.Find(c).GetComponent<CheckCube>();
 
         Rotate(Vector3.left, A, B, C);
+
+        A.GetComponent<ChangeNum>().changeNum();
+        B.GetComponent<ChangeNum>().changeNum();
+        C.GetComponent<ChangeNum>().changeNum();
     }
     public void RotateDown(string a, string b, string c)
     {
@@ -75,5 +87,9 @@ public class RotateCube : MonoBehaviour
         C = GameObject.Find(c).GetComponent<CheckCube>();
 
         Rotate(Vector3.right, A, B, C);
+
+        A.GetComponent<ChangeNum>().changeNum();
+        B.GetComponent<ChangeNum>().changeNum();
+        C.GetComponent<ChangeNum>().changeNum();
     }
 }

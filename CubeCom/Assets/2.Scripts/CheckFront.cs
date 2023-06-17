@@ -6,6 +6,7 @@ public class CheckFront : MonoBehaviour
 {
     RaycastHit hit;
     public string Num;
+    public GameObject A;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class CheckFront : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.forward, out hit, 10f))
         {
             Num = hit.collider.tag;
+            A = hit.collider.gameObject;
         }
     }
 }
